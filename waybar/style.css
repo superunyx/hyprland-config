@@ -1,0 +1,44 @@
+/* ===== Core Structure ===== */
+* {
+  border: none;
+  border-radius: 8px;
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 13px;
+  min-height: 0;
+}
+
+window#waybar {
+  background: transparent;
+  color: #ffffff; /* White text */
+  padding: 4px;
+}
+
+/* ===== All Modules ===== */
+#battery, 
+#bluetooth, 
+#network, 
+#backlight, 
+#clock, 
+#pulseaudio {
+  padding: 4px 8px;
+  margin: 0 4px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.15); /* Translucent white */
+  color: #ffffff; /* White text */
+  border: 1px solid rgba(0, 0, 0, 0.3); /* Black border */
+}
+
+/* ===== Explicitly Remove State Colors ===== */
+#battery.charging,
+#battery.full,
+#battery.warning, 
+#battery.critical,
+#bluetooth.connected,
+#bluetooth.disconnected,
+#network.connected,
+#network.disconnected,
+#pulseaudio.muted {
+  /* Force all states to use base style */
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}

@@ -1,0 +1,8 @@
+show=drun
+allow-images=true
+hide-scroll=true
+term=foot
+insensitive=true
+prompt=Run:
+width=50%
+lines=6

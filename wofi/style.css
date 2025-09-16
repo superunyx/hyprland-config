@@ -1,0 +1,35 @@
+window {
+    margin: 0px;
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle white/gray border */
+    background-color: rgba(15, 15, 15, 0.8);    /* Transparent dark background */
+    border-radius: 12px;
+    font-family: "Rubik", "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 14px;
+    color: #e0e0e0; /* Light gray text */
+}
+
+#input {
+    margin: 10px;
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    background-color: rgba(40, 40, 40, 0.6); /* Slightly lighter gray input */
+    color: #ffffff; /* White text */
+}
+
+#scroll {
+    margin: 5px;
+}
+
+#entry {
+    padding: 8px 10px;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #d0d0d0; /* Medium-light gray text */
+}
+
+#entry:selected {
+    background-color: rgba(255, 255, 255, 0.15); /* Transparent white highlight */
+    color: #ffffff; /* White text on highlight */
+}
+

@@ -1,0 +1,53 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "modules-left": ["network", "bluetooth", "pulseaudio", "clock"],
+  "modules-center": [],
+  "modules-right": [],
+  "network": {
+    "format-wifi": "📶",
+    "format-disconnected": "📴",
+    "tooltip": true,
+    "tooltip-format-wifi": "WiFi: {essid} ({signalStrength}%)",
+    "tooltip-format-disconnected": "WiFi: Disconnected",
+    "interval": 5
+  },
+  "bluetooth": {
+    "format": "󰂯 {status}",
+    "format-connected": "󰂯 {device_battery_percentage}%",
+    "format-connected-battery": "󰂯 {device_battery_percentage}%",
+    "format-disconnected": "󰂲",
+    "tooltip": true,
+    "tooltip-format": "Bluetooth: {status}",
+    "tooltip-format-connected": "Bluetooth: Connected to {device_alias} ({device_battery_percentage}%)",
+    "tooltip-format-disconnected": "Bluetooth: Disconnected",
+    "interval": 30
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "🔇",
+    "format-icons": {
+      "default": ["🔈", "🔉", "🔊"]
+    },
+    "tooltip": true,
+    "tooltip-format": "Volume: {volume}%",
+    "scroll-step": 5,
+    "on-click": "pavucontrol"
+  },
+  "clock": {
+    "format": "{:%H:%M %Y-%m-%d}",
+    "tooltip": true,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "format": {
+        "months": "<span color='#ffead3'>{}</span>",
+        "days": "<span color='#ecc6d9'>{}</span>",
+        "weeks": "<span color='#99ffdd'>{}</span>",
+        "weekdays": "<span color='#ffcc66'>{}</span>",
+        "today": "<span color='#ff6699'><b>{}</b></span>"
+      }
+    }
+  }
+}
+

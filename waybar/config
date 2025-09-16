@@ -1,0 +1,81 @@
+
+{
+  "layer": "top",
+  "position": "top",
+  "height": 28,
+  "margin": "0",
+  "modules-left": [],
+  "modules-center": [],
+  "modules-right": [
+    "bluetooth",
+    "pulseaudio",
+    "network",
+    "backlight",
+    "battery",
+    "clock"
+  ],
+
+  "bluetooth": {
+    "device": "F0:BE:25:91:80:23",
+    "format": "{icon} {device_battery_percentage}%",
+    "format-icons": {
+      "default": "󰂲",
+      "connected": "󰂱"
+    },
+    "tooltip": false
+  },
+ 
+"pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁 Muted",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"] 
+    },
+    "states": {
+      "muted": true, // this makes "muted" state trigger when muted button is pressed
+      "low": 0
+    },
+    "tooltip": false
+},
+
+  "network": {
+    "interface": "wlan0",
+    "format-wifi": " ",
+    "format-ethernet": "󰈁",
+    "format-disconnected": "󰤭 ",
+    "tooltip": false
+  },
+
+  "backlight": {
+    "format": "{icon}{percent}%",
+    "format-icons": [
+        "🌕", // 0–19%
+        "🌔", // 20–39%
+        "🌓", // 40–59%
+        "🌒", // 60–79%
+        "🌑"  // 80–100%
+    ],
+    "tooltip": false,
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-discharging": "{icon}{capacity}%",
+    "format-full": " {capacity}%",
+    "format-icons": [" ", " ", " ", " ", " "],
+    "tooltip": true,
+    "interval": 30,
+    "states": {
+      "critical": 10,
+      "warning": 30,
+      "good": 80
+    }
+  },
+
+
+"clock": {
+   "format": "{:%H:%M  %d/%m/%Y}"
+
+}
+}
